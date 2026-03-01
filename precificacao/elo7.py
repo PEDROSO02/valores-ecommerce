@@ -1,10 +1,13 @@
-elo_comissao = 0.2
-taxa_fixa = 4
+elo7_comissao = 0.12
+taxa_fixa_elo7 = 3.00
 
 def calculo_elo(vproduto, lucro):
-    pvenda = (vproduto + lucro + taxa_fixa) / (1 - elo_comissao)
-    taxa = (pvenda * elo_comissao) + taxa_fixa
+
+    pvenda = (vproduto + taxa_fixa_elo7 + lucro) / (1 - elo7_comissao)
+    taxa = (pvenda * elo7_comissao) + taxa_fixa_elo7
+
     return {
-        "pvenda": pvenda,
-        "taxa": taxa
-    } 
+        "pvenda": round(pvenda, 2),
+        "taxa": round(taxa, 2),
+        "lucro": round(lucro, 2)
+    }

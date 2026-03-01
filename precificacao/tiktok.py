@@ -1,10 +1,13 @@
-tiktok_comissao = 0.12
-taxa_fixa = 4
+tiktok_comissao = 0.16
+taxa_fixa_tiktok = 4.00
 
-def calculo_shopee(vproduto, lucro):
-    pvenda = (vproduto + lucro + taxa_fixa) / (1 - tiktok_comissao)
-    taxa = (pvenda * tiktok_comissao) + taxa_fixa
+def calculo_tiktok(vproduto, lucro):
+
+    pvenda = (vproduto + taxa_fixa_tiktok + lucro) / (1 - tiktok_comissao)
+    taxa = (pvenda * tiktok_comissao) + taxa_fixa_tiktok
+
     return {
-        "pvenda": pvenda,
-        "taxa": taxa
+        "pvenda": round(pvenda, 2),
+        "taxa": round(taxa, 2),
+        "lucro": round(lucro, 2)
     }
