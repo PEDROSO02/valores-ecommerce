@@ -18,11 +18,11 @@ body {
 
 .logo {
     margin-bottom: 30px;
-    color: #8b5cf6;
-    font-size: 35px;
+    color: #a084e2;
+    font-size: 25px;
 }
 .menu-lateral{
-    font-size: 25px;
+    font-size: 20px;
 }
 .sidebar nav {
     display: flex;
